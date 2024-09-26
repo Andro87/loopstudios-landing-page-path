@@ -58,7 +58,7 @@ export const Header = () => {
                                     >
                                         <Link
                                             href="/"
-                                            aria-label={link.linkName}
+                                            aria-label={`${link.linkName} - header navigation`}
                                             className={styles.navigation_link}
                                         >
                                             {link.linkName}

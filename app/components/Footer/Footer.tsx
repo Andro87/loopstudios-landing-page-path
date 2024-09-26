@@ -31,7 +31,7 @@ export const Footer = () => {
                                     >
                                         <Link
                                             href="/"
-                                            aria-label={link.linkName}
+                                            aria-label={`${link.linkName} - footer navigation`}
                                             className={styles.navigation_link}
                                         >
                                             {link.linkName}
