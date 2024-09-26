@@ -45,6 +45,7 @@ export const Header = () => {
                         {!isMenuMobileOpen ? <Hamburger /> : <Close />}
                     </button>
                     <nav
+                        aria-label="header"
                         className={`${styles.navigation}  ${
                             isMenuMobileOpen && styles.navigation_mobile
                         }`}

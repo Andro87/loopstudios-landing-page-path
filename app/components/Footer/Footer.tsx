@@ -21,7 +21,7 @@ export const Footer = () => {
                         <Logo />
                     </Link>
 
-                    <nav className={styles.navigation}>
+                    <nav aria-label="footer" className={styles.navigation}>
                         <ul className={styles.navigation_list}>
                             {linksData.map((link, index) => {
                                 return (
