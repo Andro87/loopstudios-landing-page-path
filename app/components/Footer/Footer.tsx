@@ -16,7 +16,7 @@ export const Footer = () => {
                 <div className={styles.wrapper}>
                     <Link
                         href="/"
-                        aria-label="The company's logo to navigate to the home page"
+                        aria-label="The company's logo in footer to navigate to the home page"
                     >
                         <Logo />
                     </Link>

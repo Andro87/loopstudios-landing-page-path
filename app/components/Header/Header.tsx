@@ -31,7 +31,7 @@ export const Header = () => {
                 <div className={styles.header_navigation}>
                     <Link
                         href="/"
-                        aria-label="The company's logo to navigate to the home page"
+                        aria-label="The company's logo in header to navigate to the home page"
                     >
                         <Logo />
                     </Link>
