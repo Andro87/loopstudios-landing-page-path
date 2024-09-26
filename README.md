@@ -28,8 +28,8 @@ Your users should be able to:
 
 ### Links
 
--   Solution URL: [Solution URL ](https://your-solution-url.com)
--   Live Site URL: [Live site URL](https://your-live-site-url.com)
+-   Solution URL: [Solution URL ](https://github.com/Andro87/loopstudios-landing-page-path.git)
+-   Live Site URL: [Live site URL](https://loopstudios-landing-page-path.vercel.app/)
 
 ## My process
 
