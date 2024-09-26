@@ -33,11 +33,6 @@ Your users should be able to:
 
 ## My process
 
-I worked on this project as part of the "Advanced CSS techniques" learning path on the Frontend Mentor platform.
-My main focus was on improving code organization and practising it.
-While working on this project, I followed Sass's guidelines for structuring a CSS project, trying to combine the possibility of splitting the codebase over several files with CSS modules.
-My goal is to enhance the architecture further by following methodologies, (such as CUBE CSS methodology or BEM ), and adopting best practices for writing cleaner, more modular, and maintainable CSS code.
-
 ### Built with
 
 -   Semantic HTML5 markup
@@ -49,6 +44,11 @@ My goal is to enhance the architecture further by following methodologies, (such
 -   [Next.js](https://nextjs.org/) - React framework
 
 ### What I learned
+
+I worked on this project as part of the "Advanced CSS techniques" learning path on the Frontend Mentor platform.
+My main focus was on improving code organization and practising it.
+While working on this project, I followed Sass's guidelines for structuring a CSS project, trying to combine the possibility of splitting the codebase over several files with CSS modules.
+My goal is to enhance the architecture further by following methodologies, (such as CUBE CSS methodology or BEM ), and adopting best practices for writing cleaner, more modular, and maintainable CSS code.
 
 ## Author
 
