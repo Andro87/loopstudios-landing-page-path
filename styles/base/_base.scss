@@ -1,0 +1,26 @@
+html {
+    font-size: 15px;
+}
+
+body {
+    color: var(--dark-gray);
+}
+
+h1 {
+    color: var(--white);
+}
+
+h2 {
+    color: var(--very-dark-gray);
+}
+
+a,
+button {
+    &:focus {
+        outline-offset: 4px;
+        outline: 2px solid var(--dark-gray);
+    }
+    &:active {
+        transform: scale(1.1);
+    }
+}

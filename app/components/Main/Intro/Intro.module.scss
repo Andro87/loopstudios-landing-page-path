@@ -1,0 +1,36 @@
+@use "styles/helpers/" as *;
+
+.section_intro {
+    display: grid;
+
+    &_img {
+        display: flex;
+
+        @include breakpoint($large) {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+        }
+    }
+
+    &_info {
+        padding-block: 24px;
+        background-color: var(--white);
+        text-align: center;
+
+        h2 {
+            margin-block: 25px;
+        }
+
+        @include breakpoint($large) {
+            margin-top: auto;
+            grid-column: 2 / 4;
+            grid-row: 1 / 2;
+            padding: 48px 0 0 48px;
+            text-align: initial;
+        }
+    }
+
+    @include breakpoint($large) {
+        grid-template-columns: 50% 10% 40%;
+    }
+}

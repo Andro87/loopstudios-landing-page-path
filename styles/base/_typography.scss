@@ -1,0 +1,29 @@
+@use "styles/helpers/" as *;
+
+body {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 2.67rem;
+    border: 2px solid var(--white);
+    padding: 0.5em;
+    @include breakpoint($large) {
+        font-size: 4.8rem;
+    }
+}
+
+h2 {
+    color: var(--black);
+    font-size: 2.13rem;
+    @include breakpoint($large) {
+        font-size: 3.2rem;
+    }
+}

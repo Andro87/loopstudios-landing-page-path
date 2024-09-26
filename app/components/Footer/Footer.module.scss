@@ -1,0 +1,100 @@
+@use "styles/helpers/" as *;
+
+.footer {
+    background-color: var(--black);
+    padding-block: 24px;
+
+    &_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+
+        @include wrapper($medium);
+        @include breakpoint($large) {
+            flex-direction: row;
+            align-items: initial;
+            justify-content: space-between;
+        }
+    }
+
+    @include breakpoint($large) {
+        padding-block: 48px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    @include breakpoint($large) {
+        justify-content: space-between;
+    }
+}
+
+.navigation {
+    &_list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        @include breakpoint($large) {
+            flex-direction: row;
+            gap: 40px;
+        }
+    }
+
+    &_link {
+        color: var(--white);
+        text-transform: capitalize;
+        position: relative;
+        display: flex;
+        &:hover {
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: -4px;
+                height: 2px;
+                width: 50%;
+                transform: translateX(50%);
+                margin-inline: auto;
+                background-color: var(--white);
+            }
+        }
+    }
+}
+
+.socialMedia {
+    &_list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        @include breakpoint($large) {
+            justify-content: end;
+        }
+    }
+
+    &_link {
+        position: relative;
+        display: flex;
+        &:hover {
+            cursor: pointer;
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                height: 2px;
+                width: 100%;
+                margin-inline: auto;
+                background-color: var(--white);
+            }
+        }
+    }
+}
+
+.rights_paragraph {
+    color: var(--dark-gray);
+}

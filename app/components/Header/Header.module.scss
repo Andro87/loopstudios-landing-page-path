@@ -1,0 +1,124 @@
+@use "styles/helpers/" as *;
+
+.header {
+    padding-block: 24px;
+    background-image: url("../../../public/images/mobile/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    &_container {
+        display: grid;
+        gap: 80px;
+
+        h1 {
+            max-width: 500px;
+
+            @include breakpoint($large) {
+                max-width: initial;
+            }
+        }
+
+        @include wrapper($medium);
+        @include breakpoint($large) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &_navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        @include breakpoint($large) {
+            grid-column: 1 / 3;
+        }
+    }
+
+    @include breakpoint($large) {
+        padding-block: 48px;
+        background-image: url("../../../public/images/desktop/image-hero.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.navigation {
+    display: none;
+
+    &_list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 80px;
+
+        @include breakpoint($large) {
+            margin-top: initial;
+            flex-direction: row;
+            gap: 48px;
+        }
+    }
+
+    &_link {
+        text-transform: uppercase;
+        color: var(--white);
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+
+        @include breakpoint($large) {
+            text-transform: capitalize;
+            font-size: 1rem;
+            position: relative;
+            display: flex;
+
+            &:hover {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: -4px;
+                    height: 2px;
+                    width: 50%;
+                    transform: translateX(50%);
+                    margin-inline: auto;
+                    background-color: var(--white);
+                }
+            }
+        }
+    }
+
+    @include breakpoint($large) {
+        display: initial;
+    }
+}
+
+.navigation_mobile {
+    display: initial;
+    position: absolute;
+    inset: 0;
+
+    @include breakpoint($large) {
+        position: initial;
+        inset: initial;
+    }
+}
+
+.btn_menu {
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+    border: none;
+
+    @include breakpoint($large) {
+        display: none;
+    }
+}
+
+.isMenuOpen_bg {
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: var(--black);
+    }
+}

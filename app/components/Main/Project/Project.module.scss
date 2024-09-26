@@ -1,0 +1,41 @@
+@use "styles/helpers/" as *;
+
+.project {
+    display: grid;
+
+    picture,
+    p {
+        @include animation;
+
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    p {
+        width: 120px; /**/
+        font-size: 1.6rem;
+        padding-left: 0.5em;
+        padding-bottom: 0.5em;
+        text-transform: uppercase;
+        color: var(--white);
+        align-self: end;
+
+        @include breakpoint($large) {
+            width: 190px;
+            font-size: 2.13rem;
+            padding: initial;
+            padding-left: 0.8em;
+            padding-bottom: 0.8em;
+        }
+    }
+
+    &:hover {
+        picture {
+            opacity: 0.25;
+        }
+
+        p {
+            color: var(--black);
+        }
+    }
+}

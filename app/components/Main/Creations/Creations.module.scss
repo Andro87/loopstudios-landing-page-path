@@ -1,0 +1,66 @@
+@use "styles/helpers/" as *;
+
+.section_creations {
+    font-weight: 300;
+    display: grid;
+    gap: 40px;
+    grid-template-areas:
+        "head"
+        "creations"
+        "showMore";
+
+    h2 {
+        grid-area: head;
+        text-align: center;
+
+        @include breakpoint($large) {
+            text-align: initial;
+        }
+    }
+
+    @include breakpoint($large) {
+        gap: 60px;
+        grid-template-areas:
+            "head showMore"
+            "creations creations";
+    }
+}
+
+.creations_container {
+    grid-area: creations;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+
+    @include breakpoint($medium) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint($large) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.show_btn {
+    @include animation;
+
+    border: 1px solid var(--black);
+    grid-area: showMore;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--black);
+    padding: 0.5em 1.5em;
+    margin-inline: auto;
+    font-size: 1rem;
+
+    &:hover {
+        cursor: pointer;
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    @include breakpoint($large) {
+        margin: initial;
+        margin-left: auto;
+        margin-bottom: auto;
+    }
+}

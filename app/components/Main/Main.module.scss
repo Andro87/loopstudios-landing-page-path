@@ -1,0 +1,21 @@
+@use "styles/helpers/" as *;
+
+.main {
+    margin-block: 80px;
+
+    @include breakpoint($large) {
+        margin-block: 120px;
+    }
+
+    &_container {
+        @include wrapper($medium);
+    }
+}
+
+.main_container > * + * {
+    margin-top: var(--flow-space, 5rem);
+
+    @include breakpoint($large) {
+        margin-top: var(--flow-space, 8rem);
+    }
+}
